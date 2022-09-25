@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+*{
+  font-family: 'Kalam', cursive;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+html{
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body{
+  background: #333;
+}
+
+header{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.5rem;
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+  border-radius: .5rem;
+  padding: .3rem 2rem;
+  transition: .2s linear;
+  z-index: 1000;
+}
+
+header .logo{
+  font-size: 3rem;
+  color: #333;
+}
+
+header .logo span{
+  color: #0098a1;
+}
+
+header .navbar ul{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+header .navbar ul li{
+  margin: 0 1rem;
+}
+
+header .navbar ul li a{
+  font-size: 2rem;
+  color: #333;
+  transition: .2s linear;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+  color: #0098a1;
+}
+
+header .fa-bars{
+  font-size: 3rem;
+  color: #0098a1;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* medis quries */
+@media (max-width:768px){
+
+  html{
+    font-size: 55%;
+  }
+
+  header .fa-bars{
+    display: block;
+  }
+
+  header .navbar{
+    position: fixed;
+    top: -1000rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    width: 100%;
+    z-index: 1000;
+    transition: .2s linear;
+    opacity: 0;
+  }
+
+  header .navbar ul{
+    flex-flow: column;
+  }
+
+  header .navbar ul li{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navbar ul li a{
+    font-size: 3rem;
+    display: block;
+  }
+
+  header .nav-toggle{
+    top: 5.5rem;
+    opacity: 1;
+  }
+
+}
