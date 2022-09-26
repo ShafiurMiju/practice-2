@@ -9,6 +9,8 @@
   box-sizing: border-box;
   outline: none;
   list-style: none;
+  border: none;
+  transition: .2s linear;
 }
 
 html{
@@ -76,6 +78,88 @@ header .fa-bars{
   display: none;
 }
 
+.home{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 2rem 10rem;
+}
+
+.home .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home .content{
+  margin-top: 7rem;
+}
+
+.home .content h1{
+  font-size: 6.1vw;
+  color: #fff;
+  text-shadow: 0 .3rem .5rem #000;
+}
+
+.home .content p{
+  font-size: 1.5vw;
+  color: #eee;
+  text-shadow: 0 .3rem .5rem #000;
+  padding-left: 2rem;
+  border-left: .3rem solid #fff;
+}
+
+.home .form-container form{
+  background-color: #fff;
+  width: 40rem;
+  margin-top: 8rem;
+  padding: 2rem;
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .9);
+  border-radius: .5rem;
+}
+
+.home .form-container form h3{
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+}
+
+.home .form-container form span{
+  color: #0098a1;
+  font-size: 2.5rem;
+  display: block;
+  margin: .5rem 0;
+}
+
+.home .form-container form input{
+  background: #eee;
+  height: 4rem;
+  width: 100%;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  text-transform: none;
+  box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .3 ) inset;
+}
+
+.home .form-container form input[type="submit"]{
+  color: #fff;
+  background: #0098a1;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.home .form-container form input[type="submit"]:hover{
+  color: #0098a1;
+  background: none;
+  border: .2rem solid #0098a1;
+}
 
 
 
@@ -98,6 +182,28 @@ header .fa-bars{
 
 
 /* medis quries */
+@media (max-width:991px){
+
+  .home{
+    flex-flow: column;
+    padding: 1.5rem;
+  }
+
+  .home .content h1{
+    text-align: center;
+    font-size: 5.5rem;
+  }
+
+  .home .content p{
+    border-left: none;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0;
+  }
+
+}
+
+
 @media (max-width:768px){
 
   html{
@@ -142,4 +248,14 @@ header .fa-bars{
     opacity: 1;
   }
 
+}
+
+@media (max-width:500px){
+  .home .form-container{
+    width: 100%;
+  }
+  
+  .home .form-container form{
+    width: 100%;
+  }
 }
